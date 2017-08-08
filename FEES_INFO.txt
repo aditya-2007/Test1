@@ -1,0 +1,19 @@
+CREATE TABLE fees_info (
+    standard VARCHAR2(4) PRIMARY KEY,
+    age NUMBER(12),
+    stdfees NUMBER(8,2),
+    transportfee NUMBER(8,2)
+);
+
+INSERT INTO fees_info VALUES ('I', 5, 18000,1200);
+INSERT INTO fees_info VALUES ('II', 6, 20000,1200);
+INSERT INTO fees_info VALUES ('III', 7, 22000,1200);
+INSERT INTO fees_info VALUES ('IV', 8, 24000,1200);
+INSERT INTO fees_info VALUES ('V', 9, 26000,1200);
+INSERT INTO fees_info VALUES ('VI', 10, 28000,1200);
+INSERT INTO fees_info VALUES ('VII', 11, 30000,1200);
+INSERT INTO fees_info VALUES ('VIII', 12, 32000,1200);
+INSERT INTO fees_info VALUES ('IX', 13, 34000,1200);
+INSERT INTO fees_info VALUES ('X', 14, 40000,1200);
+INSERT INTO fees_info VALUES ('XI', 15, 45000,1200);
+INSERT INTO fees_info VALUES ('XII', 16, 50000,1200);

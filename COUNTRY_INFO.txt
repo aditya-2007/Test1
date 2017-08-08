@@ -1,0 +1,14 @@
+CREATE TABLE country_info (
+    country_id VARCHAR2(5) PRIMARY KEY,
+    country_name VARCHAR2(25),
+    state_name VARCHAR2(25)
+);
+
+INSERT INTO country_info VALUES ('C01','India','Tamil Nadu');
+INSERT INTO country_info VALUES ('C02','India','Kerala');
+INSERT INTO country_info VALUES ('C03','India','Karnataka');
+INSERT INTO country_info VALUES ('C04','India','Andhra Pradesh');
+INSERT INTO country_info VALUES ('C05','UK','Scotland');
+INSERT INTO country_info VALUES ('C06','USA','New Jersey');
+INSERT INTO country_info VALUES ('C07','Italy','Rome');
+

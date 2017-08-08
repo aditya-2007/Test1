@@ -1,0 +1,15 @@
+CREATE TABLE student_mark_primary(
+    student_id VARCHAR2(5) PRIMARY KEY,
+    english_mark NUMBER(3),
+    hindi_mark NUMBER(3),
+    science_mark NUMBER(3),
+    maths_mark NUMBER(3),
+    total_mark NUMBER(3),
+    average_mark NUMBER(5,2),
+    grade CHAR CONSTRAINT chk_primary_grade CHECK(grade IN ('A','B','C','F'))
+);
+
+INSERT INTO student_mark_primary (student_id, english_mark, hindi_mark, science_mark, maths_mark) VALUES('L1001', 80, 72, 70, 81);
+INSERT INTO student_mark_primary VALUES('L1002', 91, 89, 85, 95, 360, 90.00, 'A');
+INSERT INTO student_mark_primary VALUES('L1003', 85, 89, 80, 82, 336, 84.00, 'B');
+INSERT INTO student_mark_primary VALUES('L1004', 59, 63, 60, 55, 237, 59.25, 'C');

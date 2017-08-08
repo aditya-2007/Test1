@@ -1,0 +1,23 @@
+CREATE TABLE subject_info(
+category CHAR CONSTRAINT chk_subject_category CHECK(category IN ('P','S','H')),
+subject_name VARCHAR2(25),
+PRIMARY KEY (category,subject_name)
+);
+
+INSERT INTO subject_info VALUES('P', 'English');
+INSERT INTO subject_info VALUES('P', 'Hindi');
+INSERT INTO subject_info VALUES('P', 'Science');
+INSERT INTO subject_info VALUES('P', 'Maths');
+
+INSERT INTO subject_info VALUES('S', 'English');
+INSERT INTO subject_info VALUES('S', 'Hindi');
+INSERT INTO subject_info VALUES('S', 'Science');
+INSERT INTO subject_info VALUES('S', 'Maths');
+INSERT INTO subject_info VALUES('S', 'Social');
+
+INSERT INTO subject_info VALUES('H', 'English');
+INSERT INTO subject_info VALUES('H', 'Tamil');
+INSERT INTO subject_info VALUES('H', 'Maths');
+INSERT INTO subject_info VALUES('H', 'Physics');
+INSERT INTO subject_info VALUES('H', 'Chemistry');
+INSERT INTO subject_info VALUES('H', 'Computer');

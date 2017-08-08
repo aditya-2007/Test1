@@ -1,0 +1,33 @@
+CREATE TABLE student_info (
+    student_id VARCHAR2(5) PRIMARY KEY,
+    student_name VARCHAR2(30),
+    date_of_birth DATE,
+    guardian_type CHAR CONSTRAINT chk_student_guardiantype CHECK(guardian_type IN ('G','P')),
+    guardian_name VARCHAR2(30),
+    address VARCHAR2(50),
+    country_id VARCHAR2(5),
+        FOREIGN KEY(country_id) REFERENCES country_info(country_id),
+    contact_no NUMBER(10),
+    mail_id VARCHAR2(30),
+    gender CHAR CONSTRAINT chk_student_gender CHECK(gender IN ('M','F')),
+    standard VARCHAR2(4),
+        FOREIGN KEY(standard) REFERENCES fees_info(standard),
+    standard_category CHAR CONSTRAINT chk_student_standardcategory CHECK(standard_category IN ('P','S','H')),
+    transport CHAR CONSTRAINT chk_student_transport CHECK(transport IN ('Y','N')),
+    net_fees NUMBER(7,2)
+);
+
+
+INSERT INTO student_info VALUES('L1001','Lakshmi Iyer','09-FEB-2012','P','Venkatesh Iyer','Coimbatore','C01',9876543210,'lakshmi.i@gmail.com','F','I','P','Y',19200);
+INSERT INTO student_info VALUES('L1002','John Mathews','14-APR-2011','P','James Mathews','Ernakulam','C02',8890765478,'john.m@yahoo.com','M','II','P','N',20000);
+INSERT INTO student_info VALUES('L1003','Amit Dixit','28-JUN-2010','G','Sandeep Eshwar','Chickmagalur','C03',7895673451,'amit.d@gmail.com','M','III','P','Y',23200);
+INSERT INTO student_info(student_id,student_name,date_of_birth,guardian_type,guardian_name,country_id,contact_no,mail_id,gender,standard,standard_category,transport) VALUES('L1004','Swetha Akkineni','03-AUG-2009','P','Pratap Akkineni','C04',9087653490,'swetha.a@gmail.com','F','IV','P','Y');
+INSERT INTO student_info VALUES('L1005','George Britto','12-OCT-2008','P','Paul Britto','Perth','C05',9847908769,'george.b@yahoo.com','M','V','P','N',26000);
+INSERT INTO student_info VALUES('L1006','Joanne Smith','21-DEC-2007','P','Alex Smith','Burlington','C06',9102938475,'joanne.s@gmail.com','F','VI','S','Y',29200);
+INSERT INTO student_info VALUES('L1007','Adrianna Russo','30-JAN-2006','P','Nicole Russo','Colonna','C07',8923465810,'adrianna.r@gmail.com','F','VII','S','Y',31200);
+
+INSERT INTO student_info VALUES('L1008','Arjun Chandrasekhar','27-MAR-2005','G','Radha Krishnan','Nilgiri','C01',9871234506,'arjun.c@gmail.com','M','VIII','S','N',32000);
+INSERT INTO student_info VALUES('L1009','Sanjay Nair','15-MAY-2004','P','Mohan Nair','Cochin','C02',7799067856,'sanjay.n@yahoo.com','M','IX','S','Y',35200);
+INSERT INTO student_info VALUES('L1010','Piyush Sharma','06-JUL-2003','P','Abhay Sharma','Coorg','C03',7896734562,'piyush.s@gmail.com','M','X','S','Y',41200);
+INSERT INTO student_info VALUES('L1011','Irfan Mohammed','20-SEP-2002','P','Syed Hafiz','Hyderabad','C04',8095642864,'irfan.m@gmail.com','M','XI','H','Y',46200);
+INSERT INTO student_info VALUES('L1012','Rishi Deshpande','17-NOV-2001','P','Anil Deshpande','Mysore','C03',8865438760,'rishi.d@gmail.com','M','XII','H','N',50000);

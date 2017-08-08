@@ -1,0 +1,29 @@
+CREATE TABLE staff_info (
+    staff_id VARCHAR2(5) PRIMARY KEY,
+    staff_name VARCHAR2(25),
+    date_of_birth DATE,
+    address VARCHAR2(50),
+    country_id VARCHAR2(5),
+        FOREIGN KEY(country_id) REFERENCES country_info(country_id),
+    gender CHAR CONSTRAINT chk_staff_gender CHECK(gender IN ('M','F')),
+    salary NUMBER(7,2),
+        FOREIGN KEY(salary) REFERENCES staff_salary(salary),
+    highest_qualification VARCHAR2(20),
+    email_id VARCHAR2(20),
+    contact_number NUMBER(10),
+    designation VARCHAR2(20),
+    year_passed_out NUMBER(5),
+    experience NUMBER(2),
+    doj DATE
+);
+
+INSERT INTO staff_info VALUES ('S1001', 'Krishna Menon', '05-OCT-1985', 'Kozhikode', 'C02', 'M', 26000, 'PG', 'krishna.m@gmail.com', 9894515555, 'Asst. Professor', 2043, 6, '31-JAN-2011');
+INSERT INTO staff_info VALUES ('S1002', 'John Andrews', '31-MAY-1987', 'Camden', 'C06', 'M', 20000, 'UG', 'john.a@yahoo.com', 8924518735, 'Asst. Professor', 2045, 5, '18-APR-2012');
+INSERT INTO staff_info VALUES ('S1003', 'Malika Roy', '24-DEC-1980', 'Bangalore', 'C03', 'F', 31000, 'PG', 'malika.r@gmail.com', 9094519487, 'Asst. Professor', 2038, 11, '05-JUL-2006');
+INSERT INTO staff_info VALUES ('S1004', 'Ramya Chandar', '18-JAN-1982', 'Chennai', 'C01', 'F', 25000, 'UG', 'ramya.c@gmail.com', 9994509876, 'Asst. Professor', 2040, 10, '22-FEB-2007');
+INSERT INTO staff_info(staff_id,staff_name,date_of_birth,country_id,gender,highest_qualification,contact_number,designation,year_passed_out,experience,doj) VALUES ('S1005', 'Angela Lauren', '29-MAR-1977', 'C07', 'F', 'PG', 8894510795, 'Asst. Professor', 2035, 16, '09-MAR-2001');
+INSERT INTO staff_info VALUES ('S1006', 'Maria Stewart', '14-NOV-1979', 'Stirling', 'C05', 'F', 30000, 'UG', 'maria.s@gmail.com', 9294511212, 'Asst. Professor', 2037, 15, '26-APR-2002');
+INSERT INTO staff_info VALUES ('S1007', 'Pratap Naidu', '09-SEP-1970', 'Visak', 'C04', 'M', 41000, 'PG', 'pratap.n@gmail.com', 9886715588, 'Asst. Professor', 2028, 21, '13-MAY-1996');
+INSERT INTO staff_info VALUES ('S1008', 'Raj Sastri', '30-APR-1972', 'Trivandrum', 'C02', 'M', 35000, 'UG', 'raj.s@yahoo.com', 8754515785, 'Professor', 2030, 20, '30-JUN-1997');
+INSERT INTO staff_info VALUES ('S1009', 'Pratik Chowdary', '16-JUN-1967', 'Guntur', 'C04', 'M', 46000, 'PG', 'pratik.c@gmail.com', 8094590855, 'Professor', 2025, 26, '15-AUG-1991');
+INSERT INTO staff_info VALUES ('S1010', 'Aryan Malhotra', '23-JUL-1969', 'Mangalore', 'C03', 'M', 40000, 'UG', 'aryan.m@gmail.com', 8004590055, 'Professor', 2027, 25, '02-FEB-1992');

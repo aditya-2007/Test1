@@ -1,0 +1,14 @@
+CREATE TABLE student_mark_higher(
+    student_id VARCHAR2(5) PRIMARY KEY,
+    english_mark NUMBER(3),
+    tamil_mark NUMBER(3),
+    physics_mark NUMBER(3),
+    chemistry_mark NUMBER(3),
+    computer_mark NUMBER(3),
+    maths_mark NUMBER(3),
+    total_mark NUMBER(3),
+    average_mark NUMBER(5,2),
+    grade CHAR CONSTRAINT chk_higher_grade CHECK(grade IN ('A','B','C','F'))
+);
+
+INSERT INTO student_mark_higher VALUES('L1010', 90, 99, 98, 97, 87, 100, 571, 95.17, 'A');

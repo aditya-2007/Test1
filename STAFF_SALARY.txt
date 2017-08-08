@@ -1,0 +1,20 @@
+CREATE TABLE staff_salary(
+year_of_experience NUMBER(2),
+highest_qualification VARCHAR2(10),
+salary NUMBER(7,2) PRIMARY KEY
+);
+
+INSERT INTO staff_salary VALUES(5,'UG',20000);
+INSERT INTO staff_salary VALUES(10,'UG',25000);
+INSERT INTO staff_salary VALUES(15,'UG',30000);
+INSERT INTO staff_salary VALUES(20,'UG',35000);
+INSERT INTO staff_salary VALUES(25,'UG',40000);
+INSERT INTO staff_salary VALUES(30,'UG',45000);
+INSERT INTO staff_salary VALUES(37,'UG',50000);
+INSERT INTO staff_salary VALUES(5,'PG',26000);
+INSERT INTO staff_salary VALUES(10,'PG',31000);
+INSERT INTO staff_salary VALUES(15,'PG',36000);
+INSERT INTO staff_salary VALUES(20,'PG',41000);
+INSERT INTO staff_salary VALUES(25,'PG',46000);
+INSERT INTO staff_salary VALUES(30,'PG',51000);
+INSERT INTO staff_salary VALUES(34,'PG',56000);
